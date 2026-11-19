@@ -1,0 +1,54 @@
+.root {
+    -fx-font-family: "SansSerif";
+    -fx-font-size: 14px;
+    -fx-background-color: #fff7ed;
+}
+.header { -fx-padding: 20 24; -fx-background-color: white; }
+.title { -fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #c2410c; }
+.muted { -fx-text-fill: #78716c; -fx-font-size: 12px; }
+.text-field, .combo-box { -fx-padding: 7; -fx-background-radius: 7; }
+.button-primary {
+    -fx-background-color: #ea580c;
+    -fx-text-fill: white;
+    -fx-padding: 10 24;
+    -fx-background-radius: 8;
+}
+.button-primary:hover { -fx-background-color: #c2410c; }
+.button-beli {
+    -fx-background-color: #16a34a;
+    -fx-text-fill: white;
+    -fx-padding: 8 16;
+    -fx-background-radius: 8;
+}
+.button-beli:hover { -fx-background-color: #15803d; }
+.button-beli:disabled { -fx-background-color: #d6d3d1; -fx-text-fill: #78716c; }
+.button-edit {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-padding: 8 16;
+    -fx-background-radius: 8;
+}
+.button-edit:hover { -fx-background-color: #1d4ed8; }
+.button-hapus {
+    -fx-background-color: #dc2626;
+    -fx-text-fill: white;
+    -fx-padding: 8 16;
+    -fx-background-radius: 8;
+}
+.button-hapus:hover { -fx-background-color: #b91c1c; }
+.button-batal {
+    -fx-background-color: #d6d3d1;
+    -fx-text-fill: #44403c;
+    -fx-padding: 10 24;
+    -fx-background-radius: 8;
+}
+.button-batal:hover { -fx-background-color: #a8a29e; }
+.katalog { -fx-padding: 20 24; }
+.kartu-produk {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 16;
+}
+.nama-produk { -fx-font-weight: bold; }
+.badge-kategori { -fx-text-fill: #c2410c; -fx-font-size: 12px; }
+.scroll-pane, .scroll-pane > .viewport { -fx-background-color: transparent; }

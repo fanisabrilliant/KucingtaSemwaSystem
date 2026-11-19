@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.KatalogController"
+            prefWidth="1000" prefHeight="760"
+            stylesheets="@styles/app.css">
+    <top>
+        <VBox spacing="8" styleClass="header">
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <ImageView fx:id="logoView" fitWidth="56" fitHeight="56" preserveRatio="true"/>
+                <Label text="Kucingta Semwa" styleClass="title"/>
+            </HBox>
+            <Label text="Petshop lengkap: makanan, kandang, dan alat bermain." styleClass="muted"/>
+            <Label text="Nama produk"/>
+            <TextField fx:id="namaField" promptText="Contoh: Whiskas Tuna 1kg"/>
+            <HBox spacing="12">
+                <VBox spacing="4" HBox.hgrow="ALWAYS">
+                    <Label text="Kategori"/>
+                    <ComboBox fx:id="kategoriBox" maxWidth="Infinity"/>
+                </VBox>
+                <VBox spacing="4" HBox.hgrow="ALWAYS">
+                    <Label text="Harga (Rp)"/>
+                    <TextField fx:id="hargaField" promptText="Contoh: 45000"/>
+                </VBox>
+                <VBox spacing="4" HBox.hgrow="ALWAYS">
+                    <Label text="Stok"/>
+                    <TextField fx:id="stokField" promptText="Contoh: 20"/>
+                </VBox>
+                <VBox spacing="4" HBox.hgrow="ALWAYS">
+                    <Label text="Foto contoh"/>
+                    <ComboBox fx:id="fotoBox" maxWidth="Infinity"/>
+                </VBox>
+            </HBox>
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <Button fx:id="simpanButton" text="Simpan Produk" onAction="#saveProduct" styleClass="button-primary"/>
+                <Button fx:id="batalButton" text="Batal" onAction="#cancelEdit" styleClass="button-batal"
+                        visible="false" managed="false"/>
+            </HBox>
+            <Label fx:id="pesanLabel" wrapText="true"/>
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <Label text="Tampilkan:"/>
+                <ComboBox fx:id="filterBox" onAction="#filterChanged"/>
+                <Label fx:id="jumlahLabel" text="Jumlah produk: 0"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="false">
+            <content>
+                <TilePane fx:id="katalogPane" hgap="16" vgap="16"
+                          alignment="TOP_LEFT" tileAlignment="TOP_LEFT"
+                          styleClass="katalog"/>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
